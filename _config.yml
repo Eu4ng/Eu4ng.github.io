@@ -196,3 +196,22 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+# 플러그인 설정
+
+jekyll_compose:
+  default_front_matter:
+    drafts:
+      author: 
+      categories: []
+      tags: []
+      imgae:
+        path: 
+        alt: 
+    posts:
+      author: 
+      categories: []
+      tags: []
+      imgae:
+        path: 
+        alt: 
