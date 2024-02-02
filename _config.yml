@@ -202,14 +202,14 @@ jekyll-archives:
 jekyll_compose:
   default_front_matter:
     drafts:
-      author: 
+      author: Eu4ng
       categories: []
       tags: []
       imgae:
         path: 
         alt: 
     posts:
-      author: 
+      author: Eu4ng
       categories: []
       tags: []
       imgae:
