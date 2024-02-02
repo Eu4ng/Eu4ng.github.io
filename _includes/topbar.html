@@ -51,7 +51,7 @@
         {% assign main_category = first_post.categories[0] %}
         {% if main_category != page.title %}
           <span>
-            <a href="{{ site.baseurl }}/categories/{{ main_category }}/">
+            <a href="{{ site.baseurl }}/categories/{{ main_category | downcase }}/">
               {{ main_category }}
             </a>
           </span>
