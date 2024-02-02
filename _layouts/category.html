@@ -8,7 +8,13 @@ layout: page
 <div id="page-category">
   <h1 class="ps-lg-2">
     <i class="far fa-folder-open fa-fw text-muted"></i>
-    {{ page.title }}
+    {% assign first_post = page.posts | first %}
+    {% assign main_category = first_post.categories[0] %}
+    {% if main_category != page.title %}
+      {{ main_category }} > {{ page.title }}
+    {% else %}
+      {{ page.title }}
+    {% endif %}
     <span class="lead text-muted ps-2">{{ page.posts | size }}</span>
   </h1>
 
