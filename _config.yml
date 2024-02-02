@@ -199,6 +199,8 @@ jekyll-archives:
 
 # 플러그인 설정
 
+## 게시글 정보 자동 완성
+
 jekyll_compose:
   default_front_matter:
     drafts:
@@ -215,3 +217,8 @@ jekyll_compose:
       imgae:
         path: 
         alt: 
+
+## 게시글 업데이트 날짜 표시
+
+plugins:
+  - jekyll-last-modified-at

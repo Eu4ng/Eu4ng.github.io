@@ -22,6 +22,9 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
-# Jekyll 에서 글양식 기능을 사용하기 위한 플러그인
+# Jekyll 플러그인
 
-gem "jekyll-compose", group: [:jekyll_plugins]
+group :jekyll_plugins do
+  gem "jekyll-compose" # 게시글 정보 자동 완성
+  gem "jekyll-last-modified-at" # 게시글 업데이트 날짜 자동 기록
+end
