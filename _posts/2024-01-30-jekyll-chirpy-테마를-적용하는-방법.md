@@ -5,9 +5,6 @@ date: 2024-01-30 17:56 +0900
 author:
 categories: [Jekyll, Chirpy]
 tags: [jekyll, chirpy]
-imgae:
-  path:
-  alt:
 ---
 
 ## 개요
