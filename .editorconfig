@@ -1,19 +1,27 @@
 root = true
 
+# 모든 파일
 [*]
+
+### 코어 EditorConfig 옵션 ###
+
+# 인코딩
 charset = utf-8
+
+# 들여쓰기 및 간격
 indent_style = space
 indent_size = 2
-trim_trailing_whitespace = true
-# Unix-style newlines with a newline ending every file
+
+# 줄 설정
 end_of_line = lf
 insert_final_newline = true
+trim_trailing_whitespace = true
 
-[*.{js,css,scss}]
-quote_type = single
-
-[*.{yml,yaml}]
-quote_type = double
-
+# 마크다운 파일
 [*.md]
+indent_size = 4
 trim_trailing_whitespace = false
+
+# Python
+[*.{ini,py,py.tpl,rst}]
+indent_size = 4
