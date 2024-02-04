@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant World
+participant WorldSubsystem
+participant GameModeBase
+participant GameStateBase
+participant WorldSettings
+participant Actor
+participant AISystem
+
+World -> World: BeginPlay
+World -> WorldSubsystem: OnWorldBeginPlay
+World -> GameModeBase: StartPlay
+GameModeBase -> GameStateBase: HandleBeginPlay
+GameStateBase -> WorldSettings: NotifyBeginPlay
+WorldSettings -> Actor: DispatchBeginPlay
+Actor -> Actor: BeginPlay
+World -> AISystem: StartPlay
+
+@enduml
