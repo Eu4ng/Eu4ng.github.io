@@ -1,0 +1,51 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant Engine
+participant World
+participant Level
+participant GameMode
+participant Actor
+participant ActorComponent
+
+Engine -> Engine: LoadMap
+Engine -> World: InitWorld
+Engine -> World: SetGameMode
+
+group Load
+    Actor -> Actor: Constructor
+    Actor -> Actor: PostInitProperties
+    ActorComponent -> ActorComponent: Constructor
+    ActorComponent -> ActorComponent: PostInitProperties
+    Actor -> Actor: PostLoad
+    ActorComponent -> ActorComponent: PostLoad
+    ActorComponent -> ActorComponent: OnRegister
+end
+
+Engine -> World: InitializeActorsForPlay
+World -> Level: RouteActorInitialize
+Level -> Actor: PreInitializeComponents
+
+group Init
+Actor -> Actor: InitializeComponents
+Actor -> ActorComponent: InitializeComponent
+ActorComponent -> ActorComponent: InitializeComponent
+Actor -> Actor: PostInitializeComponents
+end
+
+World -> World: BeginPlay
+World -> GameMode: StartPlay
+GameMode -> GameMode: StartMatch
+GameMode -> GameMode: SetMatchState
+GameMode -> GameMode: OnMatchStateSet
+GameMode -> GameMode: HandleMatchIsWaitingToStart
+
+group BeginPlay
+Actor -> Actor: BeginPlay
+Actor -> Actor: ReceiveBeginPlay (BP)
+ActorComponent -> ActorComponent: BeginPlay
+ActorComponent -> ActorComponent: BeginPlay (BP)
+end
+@enduml
