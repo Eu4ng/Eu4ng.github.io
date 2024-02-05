@@ -25,3 +25,7 @@ trim_trailing_whitespace = false
 # Python
 [*.{ini,py,py.tpl,rst}]
 indent_size = 4
+
+# PlantUML
+[*.puml]
+indent_size = 4
